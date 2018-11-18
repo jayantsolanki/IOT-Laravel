@@ -10,7 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/{any}', 'IoTPageLander@index')->where('any', '.*');
 Route::get('/', function () {
     return view('welcome');
 });
+
