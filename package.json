@@ -19,6 +19,10 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "vue-router": "^3.0.1"
+        "vue-router": "^3.0.1",
+        "vue-clickaway": "^2.1.0",
+        "vue-notifyjs": "^0.3.0",
+        "chartist": "^0.11.0",
+        "es6-promise": "^4.2.4"
     }
 }
