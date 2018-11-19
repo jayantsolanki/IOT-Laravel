@@ -100,7 +100,7 @@ export default {
   },
   mounted() {
     this.updateChartId();
-    import('chartist').then((Chartist) => {
+    require('chartist').then((Chartist) => {
       let ChartistLib = Chartist.default || Chartist ;
       this.$nextTick(() => {
         this.initChart(ChartistLib);
