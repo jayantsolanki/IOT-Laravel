@@ -73,7 +73,7 @@
   </div>
 </template>
 <script>
-import { StatsCard, ChartCard } from "@/components/index";
+import { StatsCard, ChartCard } from "../components/index";
 import Chartist from 'chartist';
 export default {
   components: {
