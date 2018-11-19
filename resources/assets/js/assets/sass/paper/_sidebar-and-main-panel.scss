@@ -1,4 +1,4 @@
-.wrapper .sidebar {
+.sidebar {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -29,7 +29,8 @@
 
 }
 
-.wrapper .sidebar {
+.sidebar,
+.off-canvas-sidebar {
   width: 260px;
   display: block;
   font-weight: 200;
@@ -74,9 +75,8 @@
   .nav {
     //margin-top: 20px;
 
-    .nav-item {
-      width: 100%;
-      .nav-link {
+    li {
+      > a {
         margin: 10px 0px;
         padding-left: 25px;
         padding-right: 25px;
@@ -84,11 +84,11 @@
         opacity: .7;
       }
 
-      &:hover > .nav-link {
+      &:hover > a {
         opacity: 1;
       }
 
-      &.active > .nav-link {
+      &.active > a {
         color: $primary-color;
         opacity: 1;
       }
@@ -161,7 +161,6 @@
   float: right;
   width: $sidebar-width;
   min-height: 100%;
-  overflow: auto;
 
   > .content {
     padding: 30px 15px;
@@ -177,7 +176,7 @@
   }
 }
 
-.wrapper .sidebar,
+.sidebar,
 .main-panel {
   -webkit-transition-property: top, bottom;
   transition-property: top, bottom;
@@ -188,7 +187,7 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.wrapper .sidebar {
+.sidebar {
   max-height: 100%;
   height: 100%;
   overflow: hidden;
