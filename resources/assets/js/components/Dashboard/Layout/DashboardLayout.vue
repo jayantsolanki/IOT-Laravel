@@ -25,6 +25,16 @@
   import ContentFooter from './ContentFooter.vue'
   import DashboardContent from './Content.vue'
   export default {
+    data(){
+        return {
+            isLoggedIn : null,
+            name : null
+        }
+    },
+    mounted(){
+        this.isLoggedIn = localStorage.getItem('jwt')
+        this.name = localStorage.getItem('user')
+    },
     components: {
       TopNavbar,
       ContentFooter,

@@ -4,6 +4,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 // Plugins
+import Login from './components/Account/Login'
+import Register from './components/Account/Register'
 import GlobalComponents from './globalComponents'
 import GlobalDirectives from './globalDirectives'
 import Notifications from './components/UIComponents/NotificationPlugin'
@@ -20,6 +22,8 @@ import './assets/sass/paper-dashboard.scss'
 import 'es6-promise/auto'
 
 // plugin setup
+Vue.use(Login)
+Vue.use(Register)
 Vue.use(VueRouter)
 Vue.use(GlobalComponents)
 Vue.use(GlobalDirectives)
