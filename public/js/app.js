@@ -53734,7 +53734,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "image" }, [
-      _c("img", { attrs: { src: "static/img/background.jpg", alt: "..." } })
+      _c("img", { attrs: { src: "img/background.jpg", alt: "..." } })
     ])
   },
   function() {
@@ -53745,7 +53745,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "author" }, [
         _c("img", {
           staticClass: "avatar border-white",
-          attrs: { src: "static/img/faces/face-2.jpg", alt: "..." }
+          attrs: { src: "img/faces/face-2.jpg", alt: "..." }
         }),
         _vm._v(" "),
         _c("h4", { staticClass: "title" }, [
@@ -53913,15 +53913,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     return {
       title: 'Team members',
       members: [{
-        image: 'static/img/faces/face-0.jpg',
+        image: 'img/faces/face-0.jpg',
         name: 'Dj Khaled',
         status: 'Offline'
       }, {
-        image: 'static/img/faces/face-1.jpg',
+        image: 'img/faces/face-1.jpg',
         name: 'Creative Tim',
         status: 'Available'
       }, {
-        image: 'static/img/faces/face-1.jpg',
+        image: 'img/faces/face-1.jpg',
         name: 'Flume',
         status: 'Busy'
       }]
