@@ -81,7 +81,7 @@
                         localStorage.setItem('jwt',response.data.success.token)
 
                         if (localStorage.getItem('jwt') != null){
-                            this.$router.go('/admin')
+                            this.$router.go('/')
                         }
                       })
                       .catch(error => {
@@ -97,7 +97,7 @@
         },
         beforeRouteEnter (to, from, next) {
             if (localStorage.getItem('jwt')) {
-                return next('admin');
+                return next('/');
             }
 
             next();
