@@ -19,18 +19,8 @@ import TableList from './../components/Dashboard/Views/TableList.vue'
 const routes = [
   {
     path: '/',
-    component: Login,
+    component: DashboardLayout,
     redirect: '/admin/overview'
-  },
-  {
-    path: '/login',
-    component: Login,
-    redirect: '/login'
-  },
-  {
-    path: '/register',
-    component: Register,
-    redirect: '/register'
   },
   {
     path: '/admin',
@@ -41,6 +31,16 @@ const routes = [
         path: 'overview',
         name: 'overview',
         component: Overview
+      },
+      {
+        path: 'login',
+        name: 'login',
+        component: Login
+      },
+      {
+        path: 'register',
+        name: 'register',
+        component: Register
       },
       {
         path: 'stats',
