@@ -1,7 +1,9 @@
-import DashboardLayout from '../components/Dashboard/Layout/DashboardLayout.vue'
+import DashboardLayout from '../components/Dashboard/Layout/DashboardLayout.vue' // main layout, header,footer and sidebar
+
 // AccountViews
 import Login from '../components/Account/Login.vue'
-import Register from '../components/Account/Register'
+import Register from '../components/Account/Register.vue'
+
 // GeneralViews
 import NotFound from '../components/GeneralViews/NotFoundPage.vue'
 
@@ -17,7 +19,7 @@ import TableList from './../components/Dashboard/Views/TableList.vue'
 const routes = [
   {
     path: '/',
-    component: DashboardLayout,
+    component: Login,
     redirect: '/admin/overview'
   },
   {
