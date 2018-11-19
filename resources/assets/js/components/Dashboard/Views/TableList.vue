@@ -65,6 +65,8 @@
     },
     data() {
       return {
+        isLoggedIn : null,
+        name : null,
         table1: {
           title: 'Stripped Table',
           subTitle: 'Here is a subtitle for this table',
@@ -78,6 +80,10 @@
           data: [...tableData]
         }
       }
+    },
+    mounted(){
+      this.isLoggedIn = localStorage.getItem('jwt')
+      this.name = localStorage.getItem('user')
     }
   }
 
