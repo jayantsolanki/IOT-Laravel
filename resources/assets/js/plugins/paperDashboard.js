@@ -5,7 +5,8 @@ import GlobalDirectives from "./globalDirectives";
 import "es6-promise/auto";
 
 //css assets
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
+import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
 import "../assets/sass/paper-dashboard.scss";
 import "../assets/css/themify-icons.css";
 
