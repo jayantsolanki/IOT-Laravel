@@ -74,7 +74,7 @@
       },
       hideSidebar () {
         this.$sidebar.displaySidebar(false)
-      }
+      },
       signout () {
         alert("Trying to sign out")
         localStorage.removeItem('user')
