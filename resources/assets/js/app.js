@@ -4,8 +4,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 // Plugins
-import Login from './components/Account/Login'
-import Register from './components/Account/Register'
+import Login from './components/Account/Views/Login'
+import Register from './components/Account/Views/Register'
 import GlobalComponents from './globalComponents'
 import GlobalDirectives from './globalDirectives'
 import Notifications from './components/UIComponents/NotificationPlugin'
