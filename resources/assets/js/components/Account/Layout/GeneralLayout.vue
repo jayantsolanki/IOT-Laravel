@@ -3,9 +3,7 @@
     <div class="main-panel">
       <top-navbar></top-navbar>
 
-      <dashboard-content @click.native="toggleSidebar">
-
-      </dashboard-content>
+      <GeneralContent/>
 
       <content-footer></content-footer>
     </div>
