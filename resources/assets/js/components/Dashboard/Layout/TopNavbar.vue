@@ -33,6 +33,14 @@
               </p>
             </a>
           </li>
+          <li>
+            <a href="#" class="btn-rotate" @click="signout"><!--give distinctive color for this button-->
+              <i class="ti-logout"></i>
+              <p>
+                Sign Out
+              </p>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -66,6 +74,12 @@
       },
       hideSidebar () {
         this.$sidebar.displaySidebar(false)
+      }
+      signout () {
+        alert("Trying to sign out")
+        localStorage.removeItem('user')
+        localStorage.removeItem('jwt')
+        this.$router.go('/login')
       }
     }
   }

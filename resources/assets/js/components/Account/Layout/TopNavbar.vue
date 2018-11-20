@@ -7,12 +7,12 @@
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="open">
-            <a href="#" class="dropdown-toggle btn-magnify" data-toggle="dropdown">
+            <a href="/login" class="dropdown-toggle btn-magnify" data-toggle="dropdown">
               <p>Sign In</p>
             </a>
           </li>
           <li>
-            <a href="#" class="btn-rotate">
+            <a href="/register" class="btn-rotate">
               <i class="ti-settings"></i>
               <p>
                 Sign Up
