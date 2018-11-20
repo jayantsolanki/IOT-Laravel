@@ -1,8 +1,5 @@
 <template>
   <div class="wrapper">
-    <notifications>
-
-    </notifications>
     <div class="main-panel">
       <top-navbar></top-navbar>
 

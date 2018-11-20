@@ -21,7 +21,19 @@ const routes = [
   {
     path: '/',
     component: GeneralLayout,
-    redirect: '/login'
+    redirect: '/login',
+    children: [
+      {
+        path: 'login',
+        name: 'login',
+        component: Login
+      },
+      {
+        path: 'register',
+        name: 'register',
+        component: Register
+      }
+    ]
   },
   {
     path: '/admin',
@@ -32,16 +44,6 @@ const routes = [
         path: 'overview',
         name: 'overview',
         component: Overview
-      },
-      {
-        path: 'login',
-        name: 'login',
-        component: Login
-      },
-      {
-        path: 'register',
-        name: 'register',
-        component: Register
       },
       {
         path: 'stats',
