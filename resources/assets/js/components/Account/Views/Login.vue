@@ -1,142 +1,34 @@
 
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card card-default">
-                    <div class="card-header">Login</div>
+<div class="account-form">
+    <img src="https://compass-ssl.microsoft.com/assets/7c/f5/7cf5c795-b490-4bed-9289-f6826c9dd76b.svg?n=account-icon-gray.svg" class="avatar">
+    <h2>Login</h2>
+    <form method="POST" action="/login">
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user"></i></span>
+            <input id="email" type="email" class="form-control" v-model="email" required autofocus aria-describedby="sizing-addon1" placeholder="Email">
+        </div>
 
-                    <div class="card-body">
-                        <form method="POST" action="/login">
-                            <div class="form-group row">
-                                <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
-
-                                <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" v-model="email" required autofocus>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-
-                                <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control" v-model="password" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group row mb-0">
-                                <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary" @click="handleSubmit">
-                                        Login
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                        <form>
-                            <div class="row">
-                            <div class="col-md-5">
-                                <fg-input type="text"
-                                        label="Company"
-                                        :disabled="true"
-                                        placeholder="Paper dashboard"
-                                        v-model="user.company">
-                                </fg-input>
-                            </div>
-                            <div class="col-md-3">
-
-                                <fg-input type="text"
-                                        label="Username"
-                                        placeholder="Username"
-                                        v-model="user.username">
-                                </fg-input>
-                            </div>
-                            <div class="col-md-4">
-                                <fg-input type="email"
-                                        label="Username"
-                                        placeholder="Email"
-                                        v-model="user.email">
-                                </fg-input>
-                            </div>
-                            </div>
-
-                            <div class="row">
-                            <div class="col-md-6">
-                                <fg-input type="text"
-                                        label="First Name"
-                                        placeholder="First Name"
-                                        v-model="user.firstName">
-                                </fg-input>
-                            </div>
-                            <div class="col-md-6">
-                                <fg-input type="text"
-                                        label="Last Name"
-                                        placeholder="Last Name"
-                                        v-model="user.lastName">
-                                </fg-input>
-                            </div>
-                            </div>
-
-                            <div class="row">
-                            <div class="col-md-12">
-                                <fg-input type="text"
-                                        label="Address"
-                                        placeholder="Home Address"
-                                        v-model="user.address">
-                                </fg-input>
-                            </div>
-                            </div>
-
-                            <div class="row">
-                            <div class="col-md-4">
-                                <fg-input type="text"
-                                        label="City"
-                                        placeholder="City"
-                                        v-model="user.city">
-                                </fg-input>
-                            </div>
-                            <div class="col-md-4">
-                                <fg-input type="text"
-                                        label="Country"
-                                        placeholder="Country"
-                                        v-model="user.country">
-                                </fg-input>
-                            </div>
-                            <div class="col-md-4">
-                                <fg-input type="number"
-                                        label="Postal Code"
-                                        placeholder="ZIP Code"
-                                        v-model="user.postalCode">
-                                </fg-input>
-                            </div>
-                            </div>
-
-                            <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                <label>About Me</label>
-                                <textarea rows="5" class="form-control border-input"
-                                            placeholder="Here can be your description"
-                                            v-model="user.aboutMe">
-
-                                </textarea>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="text-center">
-                            <button type="submit" class="btn btn-info btn-fill btn-wd" @click.prevent="updateProfile">
-                                Update Profile
-                            </button>
-                            </div>
-                            <div class="clearfix"></div>
-                        </form>
-                    </div>
-                </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+            <input id="password" type="password" class="form-control" v-model="password" required aria-describedby="sizing-addon1" placeholder="Password">
+        </div>
+        <div class="row mb-0">
+            <div class="col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4">
+                <button type="submit" class="btn btn-danger" @click="handleSubmit">
+                    <b>Sign In</b>
+                </button>
             </div>
         </div>
-    </div>
+        <hr/>
+        <div class="row mb-0">
+            <div class="col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4">
+                <router-link class="btn btn-success" to="register">Sign Up</router-link>
+            </div>
+        </div>
+    </form>
+</div>
 </template>
-
-
 <script>
     export default {
         data(){
@@ -166,10 +58,13 @@
                         password: this.password
                       })
                       .then(response => {
-                        localStorage.setItem('user',response.data.success.name)
-                        localStorage.setItem('jwt',response.data.success.token)
+                        // alert(1)
+                        localStorage.setItem('user',JSON.stringify(response.data.success))
+                        // localStorage.setItem('email',response.data.success.user.email)
+                        // localStorage.setItem('name',response.data.success.user.name)
+                        // localStorage.setItem('jwt',response.data.success.token)
 
-                        if (localStorage.getItem('jwt') != null){
+                        if (response.data.success.token != null){
                             this.$router.go('/')
                         }
                       })
@@ -183,7 +78,8 @@
             }
         },
         beforeRouteEnter (to, from, next) {
-            if (localStorage.getItem('jwt')) {
+            const status =  JSON.parse(window.localStorage.getItem('user'));
+            if (status!=null || status!=undefined) {
                 return next('/admin');
             }
 
@@ -191,3 +87,9 @@
         }
     }
 </script>
+<style>
+  .account-form
+  {
+      height: 400px;
+  }
+</style>

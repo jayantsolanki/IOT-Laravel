@@ -1,11 +1,10 @@
 <template>
-  <div class="wrapper">
-    <div class="main-panel">
-      <top-navbar></top-navbar>
+  <div>
+    <div>
 
       <GeneralContent/>
 
-      <content-footer></content-footer>
+      <!-- <content-footer></content-footer> -->
     </div>
   </div>
 </template>

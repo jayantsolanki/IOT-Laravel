@@ -11,9 +11,17 @@
         }
     },
     mounted(){
-        this.isLoggedIn = localStorage.getItem('jwt')
-        this.name = localStorage.getItem('user')
+        this.isLoggedIn = JSON.parse(window.localStorage.getItem('user'));
+        this.name = this.isLoggedIn.user.name
     }
+    // methods: {
+    //     logout() {
+    //         alert("Trying to sign out")
+    //         this.isLoggedIn = false;
+    //         localStorage.removeItem('user')
+    //         this.$router.go('login')
+    //     }
+    // }
   }
 </script>
 

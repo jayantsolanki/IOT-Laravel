@@ -1,56 +1,44 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card card-default">
-                    <div class="card-header">Register</div>
+    <div class="account-form">
+        <img src="https://compass-ssl.microsoft.com/assets/7c/f5/7cf5c795-b490-4bed-9289-f6826c9dd76b.svg?n=account-icon-gray.svg" class="avatar">
+        <h2>Registration</h2>
+        <form method="POST" action="/register">
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1">Name</span>
+                <input id="name" type="text" class="form-control" v-model="name" required autofocus placeholder="Full Name">
+            </div>
 
-                    <div class="card-body">
-                        <form method="POST" action="/register">
-                            <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1">E-Mail</span>
+                <input id="email" type="email" class="form-control" v-model="email" required placeholder="Email">
+            </div>
 
-                                <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" v-model="name" required autofocus>
-                                </div>
-                            </div>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1">Password</span>
+                <input id="password" type="password" class="form-control" v-model="password" required placeholder="Password">
+            </div>
 
-                            <div class="form-group row">
-                                <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1">Retype Password</span>
+                <input id="password-confirm" type="password" class="form-control" v-model="password_confirmation" required placeholder="Password">
+            </div>
 
-                                <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" v-model="email" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-
-                                <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control" v-model="password" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
-
-                                <div class="col-md-6">
-                                    <input id="password-confirm" type="password" class="form-control" v-model="password_confirmation" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group row mb-0">
-                                <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary" @click="handleSubmit">
-                                        Register
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+            <div class="row mb-0">
+                <div class="col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4">
+                    <button type="submit" class="btn btn-success" @click="handleSubmit">
+                        Register
+                    </button>
                 </div>
             </div>
-        </div>
+            <hr/>
+            <div class="row mb-0">
+                <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
+                    <router-link  to="login" class="btn btn-danger">
+                        Already registered! Sign In
+                    </router-link>
+                </div>
+            </div>
+        </form>
     </div>
 </template>
 
@@ -104,3 +92,20 @@
         }
     }
 </script>
+<style>
+ .account-form input[type="text"]
+  {
+      /* border: none; */
+      border: 1px solid #fff;
+      /* border-bottom: 1px solid #fff; */
+      background: transparent;
+      outline: none;
+      /* height: 40px; */
+      color: #fff;
+      font-size: 16px;
+  }
+  .account-form
+  {
+      height: 600px;
+  }
+</style>

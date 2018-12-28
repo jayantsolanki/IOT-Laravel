@@ -34,7 +34,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="btn-rotate" @click="signout"><!--give distinctive color for this button-->
+            <a href="#" class="btn-rotate" @click="logout"><!--give distinctive color for this button-->
               <i class="ti-logout"></i>
               <p>
                 Sign Out
@@ -56,8 +56,14 @@
     },
     data () {
       return {
-        activeNotifications: false
+        activeNotifications: false,
+        isLoggedIn : null,
+        name : null
       }
+    },
+    mounted(){
+        this.isLoggedIn = JSON.parse(window.localStorage.getItem('user'));
+        this.name = this.isLoggedIn.user.name
     },
     methods: {
       capitalizeFirstLetter (string) {
@@ -75,11 +81,10 @@
       hideSidebar () {
         this.$sidebar.displaySidebar(false)
       },
-      signout () {
-        alert("Trying to sign out")
-        localStorage.removeItem('user')
-        localStorage.removeItem('jwt')
-        this.$router.go('/login')
+      logout() {
+          this.isLoggedIn = false;
+          localStorage.removeItem('user')
+          this.$router.push('/login')//send to login page
       }
     }
   }

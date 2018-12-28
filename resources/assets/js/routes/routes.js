@@ -21,17 +21,22 @@ const routes = [
   {
     path: '/',
     component: GeneralLayout,
-    redirect: '/login',
+    redirect: '/admin',
     children: [
       {
-        path: 'login',
+        path: '/login',
         name: 'login',
         component: Login
       },
       {
-        path: 'register',
+        path: '/register',
         name: 'register',
         component: Register
+      },
+      {
+        path: '/denied',
+        name: 'denied'
+       // component: Denied
       }
     ]
   },
@@ -39,6 +44,7 @@ const routes = [
     path: '/admin',
     component: DashboardLayout,
     redirect: '/admin/stats',
+    meta: { requiresAuth: true, roles: ['admin']},
     children: [
       {
         path: 'overview',
