@@ -3,6 +3,12 @@
 <div class="account-form">
     <img src="https://compass-ssl.microsoft.com/assets/7c/f5/7cf5c795-b490-4bed-9289-f6826c9dd76b.svg?n=account-icon-gray.svg" class="avatar">
     <h2>Login</h2>
+    <p v-if="errors.length">
+        <b>Please correct the following error(s):</b>
+        <ul>
+        <li v-for="error in errors">{{ error }}</li>
+        </ul>
+    </p>
     <form method="POST" action="/login">
         <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user"></i></span>
@@ -33,6 +39,7 @@
     export default {
         data(){
             return {
+                errors: [],
                 email : "",
                 password : "",
                 user: {
@@ -65,7 +72,8 @@
                         // localStorage.setItem('jwt',response.data.success.token)
 
                         if (response.data.success.token != null){
-                            this.$router.go('/')
+                            this.$router.push('/')
+                            // this.$router.push("/"+response.data.success.user.role)
                         }
                       })
                       .catch(function (error) {
@@ -76,15 +84,15 @@
             updateProfile () {
                 alert('Your data: ' + JSON.stringify(this.user))
             }
-        },
-        beforeRouteEnter (to, from, next) {
-            const status =  JSON.parse(window.localStorage.getItem('user'));
-            if (status!=null || status!=undefined) {
-                return next('/admin');
-            }
-
-            next();
         }
+        // beforeRouteEnter (to, from, next) {
+        //     const status =  JSON.parse(window.localStorage.getItem('user'));
+        //     if (status!=null || status!=undefined) {
+        //         return next('/admin');
+        //     }
+
+        //     next();
+        // }
     }
 </script>
 <style>

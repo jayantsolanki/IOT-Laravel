@@ -37,50 +37,24 @@ const router = new VueRouter({
 })
 // setting up the auth control for router
 router.beforeEach((to, from, next) => {
-  // if(to.meta.requiresAuth) {
-  //   let authUser = JSON.parse(window.localStorage.getItem('user'))
-  //   if(!authUser || !authUser.token) {// if no record or token found redirect to login page
-  //     next({name:'login'})
-  //   }
-  //   else if(to.meta.adminAuth) {
-  //     const authUser = JSON.parse(window.localStorage.getItem('user'))
-  //     if(authUser.data.role === 'ADMIN') {
-  //       next()
-  //     }
-  //     else {
-  //       next('/resident')
-  //     }
-  //   } 
-  //   else if(to.meta.memberAuth) {
-  //     const authUser = JSON.parse(window.localStorage.getItem('user'))
-  //     if(authUser.data.role_id === 'MEMBER') {
-  //       next()
-  //     }else {
-  //       console.log('Im in admin')
-  //       next('/admin')
-  //     }
-  //   }
-  // }
-  // else {
-  // next()
-  // }
-  //
   if(!to.meta.requiresAuth) {
-    next()
+    console.log('doesnt require auth')
+    return next()
   }
   const authUser =  JSON.parse(window.localStorage.getItem('user'));
-  // alert(authUser.user.role)
   if(!authUser || !authUser.token) {// if no record or token found redirect to login page
-    next({name:'login'})
+    return next({name:'login'})
   }
-  if(!to.meta.roles){
-    next()
+  if(to.meta.roles.length==0){// for login or register
+    return next()
   }
   if(to.meta.roles.includes(authUser.user.role)){//admin or client
-    next({name:authUser.user.role})
-    // next({name:'denied'})
+    if(to.meta.title=="Dashboard"){
+      return next({name:authUser.user.role})
+    }
+    return next()
   }
-  next({name:'denied'})
+  return next({name:'denied'})
 
 })
 

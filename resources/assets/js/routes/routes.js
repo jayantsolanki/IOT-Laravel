@@ -19,22 +19,29 @@ import TableList from './../components/Dashboard/Views/TableList.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/', 
+    meta: { title: 'Dashboard', requiresAuth: true, roles: ['admin','member']}
+  },
+  {
+    path: '/auth',
     component: GeneralLayout,
-    redirect: '/admin',
+    redirect: '/auth/login',
     children: [
       {
-        path: '/login',
+        path: 'login',
         name: 'login',
+        meta: {title: 'Login', requiresAuth: false, roles: []},
         component: Login
       },
       {
-        path: '/register',
+        path: 'register',
         name: 'register',
+        meta: {title: 'Register', requiresAuth: false, roles: []},
         component: Register
       },
       {
-        path: '/denied',
+        path: 'denied',
+        // meta: { requiresAuth: false, roles: []},
         name: 'denied'
        // component: Denied
       }
@@ -42,44 +49,51 @@ const routes = [
   },
   {
     path: '/admin',
+    name: 'admin',
     component: DashboardLayout,
     redirect: '/admin/stats',
-    meta: { requiresAuth: true, roles: ['admin']},
     children: [
       {
         path: 'overview',
         name: 'overview',
-        component: Overview
+        component: Overview,
+        meta: {title: 'Overview', requiresAuth: true, roles: ['admin']}
       },
       {
         path: 'stats',
         name: 'stats',
-        component: UserProfile
+        component: UserProfile,
+        meta: {title: 'Your Profile', requiresAuth: true, roles: ['admin']}
       },
       {
         path: 'notifications',
         name: 'notifications',
-        component: Notifications
+        component: Notifications,
+        meta: {title: 'Notifications', requiresAuth: true, roles: ['admin']}
       },
       {
         path: 'icons',
         name: 'icons',
-        component: Icons
+        component: Icons,
+        meta: {title: 'Icons', requiresAuth: true, roles: ['admin']}
       },
       {
         path: 'maps',
         name: 'maps',
-        component: Maps
+        component: Maps,
+        meta: {title: 'Maps', requiresAuth: true, roles: ['admin']}
       },
       {
         path: 'typography',
         name: 'typography',
-        component: Typography
+        component: Typography,
+        meta: {title: 'Typography', requiresAuth: true, roles: ['admin']}
       },
       {
         path: 'table-list',
         name: 'table-list',
-        component: TableList
+        component: TableList,
+        meta: {title: 'Table List', requiresAuth: true, roles: ['admin']}
       }
     ]
   },

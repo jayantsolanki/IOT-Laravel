@@ -9,11 +9,11 @@
             isLoggedIn : null,
             name : null
         }
-    },
-    mounted(){
-        this.isLoggedIn = JSON.parse(window.localStorage.getItem('user'));
-        this.name = this.isLoggedIn.user.name
     }
+    // mounted(){
+    //     this.isLoggedIn = JSON.parse(window.localStorage.getItem('user'));
+    //     this.name = this.isLoggedIn.user.name
+    // }
     // methods: {
     //     logout() {
     //         alert("Trying to sign out")

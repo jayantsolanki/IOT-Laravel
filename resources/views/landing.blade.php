@@ -2,6 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <!-- csrf token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>

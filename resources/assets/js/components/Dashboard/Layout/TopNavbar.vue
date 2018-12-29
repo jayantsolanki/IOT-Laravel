@@ -84,7 +84,7 @@
       logout() {
           this.isLoggedIn = false;
           localStorage.removeItem('user')
-          this.$router.push('/login')//send to login page
+          this.$router.push('/')//send to login page
       }
     }
   }
