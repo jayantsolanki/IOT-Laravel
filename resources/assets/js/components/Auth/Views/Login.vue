@@ -1,6 +1,9 @@
 
 <template>
 <div class="account-form">
+    <notifications>
+
+    </notifications>
     <img src="https://compass-ssl.microsoft.com/assets/7c/f5/7cf5c795-b490-4bed-9289-f6826c9dd76b.svg?n=account-icon-gray.svg" class="avatar">
     <h2>Login</h2>
     <!-- <p><ul>
@@ -55,40 +58,53 @@
         methods : {
             handleSubmit(e){
                 e.preventDefault()
-
+                var self=this;// important lesson
                 if (this.password.length > 0) {
                     axios.post('api/login', {
                         email: this.email,
                         password: this.password
                       })
                       .then(response => {
-                        // alert(1)
-                        
-                        // localStorage.setItem('email',response.data.success.user.email)
-                        // localStorage.setItem('name',response.data.success.user.name)
-                        // localStorage.setItem('jwt',response.data.success.token)
-                        
                         if (response.data.type != 'success'){
                             console.log(response.data)
                             localStorage.setItem('user',JSON.stringify(response.data.success.data))
-                            this.success.push(response.data.success)
+                            // this.success.push(response.data.success)
+                            self.errors=[]
+                            self.success=[response.data.success]
+                            self.notifyVue('top', 'center', response.data.success)
                             // this.$router.push('/')
-                            // this.$router.push("/"+response.data.success.user.role)
-                        }
-                        else{
-                            console.log(response.data.error.description)
-                            this.errors.push(response.data.error.error)
                         }
                       })
                       .catch(function (error) {
-                        console.error(error.response.data.error.description);
-                        // this.errors=error.response.data.error.error
-                        this.errors.push(error.response.data.error.description)
+                        console.error(error.response.data.error.description)
+                        self.success=[]
+                        self.errors=[error.response.data.error]
+                        // this.errors.push(error.response.data.error.description)
+                        self.notifyVue('top', 'center', error.response.data.error)
                       });
                 }
             },
             updateProfile () {
                 alert('Your data: ' + JSON.stringify(this.user))
+            },
+            notifyVue (verticalAlign, horizontalAlign, message) {
+                var type = null ,icon = null
+                if(message.type=='success'){
+                    type='success'
+                    icon='ti-thumb-up'
+                }
+                else{
+                    type='danger'
+                    icon='ti-alert'
+                }
+                this.$notifications.notify(
+                {
+                    message: message.description,
+                    icon: icon,
+                    horizontalAlign: horizontalAlign,
+                    verticalAlign: verticalAlign,
+                    type: type
+                })
             }
         }
     }

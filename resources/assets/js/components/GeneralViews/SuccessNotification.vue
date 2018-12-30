@@ -1,6 +1,6 @@
 <template>
-    <p class="text-center">
-        <span class="badge badge-success" v-for="msg in success">{{ msg.description }}</span>
+    <p class="text-center" v-if="success.length">
+        <span class="label label-success" v-for="msg in success">{{ msg.description }}</span>
     </p>
 </template>
 <script>

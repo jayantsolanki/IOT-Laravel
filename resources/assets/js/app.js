@@ -41,7 +41,6 @@ const router = new VueRouter({
 // setting up the auth control for router
 router.beforeEach((to, from, next) => {
   if(!to.meta.requiresAuth) {
-    console.log('doesnt require auth')
     return next()
   }
   const authUser =  JSON.parse(window.localStorage.getItem('user'));

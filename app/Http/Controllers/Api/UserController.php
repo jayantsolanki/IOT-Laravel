@@ -13,18 +13,29 @@ class UserController extends Controller
 {
     public function login(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|email',
-            'password' => 'required|min:5'
-        ]);
-        $status = 401;
-        $response = ['type'=>'error'];
+           
+        $rules = [
+            'email' => 'required|email|max:255',
+            'password' => 'required|min:6'
+        ];
+        $messages = [   
+            'email.required' =>  'Email Id is compulsory',
+            'email.email'        =>  'Email Id is not in proper format',
+            'email.max'        =>  'Email Id should be at most 255 characters long',
+            'password.required' =>  'Password is compulsory',
+            'password.min' => 'Password should be at least 6 characters long'
+
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+        // return (string)$validator->fails();
         if ($validator->fails()) {
             $response['status'] = 422;
             $response['description'] = "Field validation error";
             $response['error'] =  $validator->errors();
             return response()->json(['error' => $response], 422);
-        }  
+        }
+
         $credentials = [
             'email' => request('email'),
             'password' => request('password')
@@ -39,9 +50,10 @@ class UserController extends Controller
         }
 
         // return response()->json(['error' => 'Unauthorised'], 401);
+        $response = ['type'=>'error'];
         $response['status'] = 401;
         $response['description'] = "Wrong credentials";
-        $response['error'] = ['Please provide correct credentials'];
+        $response['error'] = ['msg' => ['Please provide correct credentials']];
         return response()->json(['error' => $response], 401);
     }
 
@@ -49,8 +61,8 @@ class UserController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required',
+            'email' => 'required|email|unique:login',
+            'password' => 'required|min:5',
         ]);
 
         if ($validator->fails()) {

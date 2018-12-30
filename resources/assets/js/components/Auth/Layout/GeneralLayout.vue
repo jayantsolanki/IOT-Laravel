@@ -15,6 +15,7 @@
   import TopNavbar from './TopNavbar.vue'
   import ContentFooter from './ContentFooter.vue'
   import GeneralContent from './Content.vue'
+  import PaperNotification from './../../../components/UIComponents/NotificationPlugin/Notification.vue'
   export default {
     data(){
         return {
@@ -29,7 +30,8 @@
     components: {
       TopNavbar,
       ContentFooter,
-      GeneralContent
+      GeneralContent,
+      PaperNotification
     }
   }
 
