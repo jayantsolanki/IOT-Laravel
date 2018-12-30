@@ -1,21 +1,33 @@
-import DashboardLayout from '../components/Dashboard/Layout/DashboardLayout.vue' // main layout, header,footer and sidebar
 
-// AccountViews
-import GeneralLayout from '../components/Account/Layout/GeneralLayout.vue'
-import Login from '../components/Account/Views/Login.vue'
-import Register from '../components/Account/Views/Register.vue'
 
-// GeneralViews
+/*************************************************** Used for Authentication **********************************************************************/
+// Authentication
+import GeneralLayout from '../components/Auth/Layout/GeneralLayout.vue'
+import Login from '../components/Auth/Views/Login.vue'
+import Register from '../components/Auth/Views/Register.vue'
+/***************************************************************************************************************************************/
+// GeneralViews, Page Not Found
 import NotFound from '../components/GeneralViews/NotFoundPage.vue'
 
+/*************************************************** Admin pages **********************************************************************/
+// import DashboardLayout from '../components/Dashboard/Admin/Layout/DashboardLayout.vue' // main layout, header,footer and sidebar
+/***************************************************************************************************************************************/
+
+
+/*************************************************** Member Pages **********************************************************************/
+/***************************************************************************************************************************************/
+
+/*************************************************** Old webpages **********************************************************************/
 // Admin pages
-import Overview from './../components/Dashboard/Views/Overview.vue'
-import UserProfile from './../components/Dashboard/Views/UserProfile.vue'
-import Notifications from './../components/Dashboard/Views/Notifications.vue'
-import Icons from './../components/Dashboard/Views/Icons.vue'
-import Maps from './../components/Dashboard/Views/Maps.vue'
-import Typography from './../components/Dashboard/Views/Typography.vue'
-import TableList from './../components/Dashboard/Views/TableList.vue'
+import DashboardLayout from '../components/Dashboard-old/Layout/DashboardLayout.vue' // main layout, header,footer and sidebar
+import Overview from './../components/Dashboard-old/Views/Overview.vue'
+import UserProfile from './../components/Dashboard-old/Views/UserProfile.vue'
+import Notifications from './../components/Dashboard-old/Views/Notifications.vue'
+import Icons from './../components/Dashboard-old/Views/Icons.vue'
+import Maps from './../components/Dashboard-old/Views/Maps.vue'
+import Typography from './../components/Dashboard-old/Views/Typography.vue'
+import TableList from './../components/Dashboard-old/Views/TableList.vue'
+/***************************************************************************************************************************************/
 
 const routes = [
   {
@@ -51,7 +63,13 @@ const routes = [
     path: '/admin',
     name: 'admin',
     component: DashboardLayout,
-    redirect: '/admin/stats',
+    redirect: '/def/stats'
+  },
+  {
+    path: '/def',
+    name: 'def',
+    component: DashboardLayout,
+    redirect: '/def/stats',
     children: [
       {
         path: 'overview',

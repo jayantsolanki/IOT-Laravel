@@ -3,12 +3,10 @@
 <div class="account-form">
     <img src="https://compass-ssl.microsoft.com/assets/7c/f5/7cf5c795-b490-4bed-9289-f6826c9dd76b.svg?n=account-icon-gray.svg" class="avatar">
     <h2>Login</h2>
-    <p v-if="errors.length">
-        <b>Please correct the following error(s):</b>
-        <ul>
-        <li v-for="error in errors">{{ error }}</li>
-        </ul>
-    </p>
+    <!-- <p><ul>
+        <li v-for="error in success">{{ error.status }}</li>
+        </ul></p> -->
+
     <form method="POST" action="/login">
         <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user"></i></span>
@@ -33,25 +31,24 @@
             </div>
         </div>
     </form>
+    <ErrorNotification :errors="errors"></ErrorNotification>
+    <SuccessNotification :success="success"></SuccessNotification>
 </div>
 </template>
 <script>
+    import ErrorNotification from '../../../components/GeneralViews/ErrorNotification.vue'
+    import SuccessNotification from '../../../components/GeneralViews/SuccessNotification.vue'
     export default {
+        components: {
+        ErrorNotification,
+        SuccessNotification
+        },
         data(){
             return {
                 errors: [],
+                success: [],
                 email : "",
-                password : "",
-                user: {
-                    company: 'Paper Dashboard',
-                    username: 'michael23',
-                    email: '',
-                    lastName: 'Faker',
-                    address: 'Melbourne, Australia',
-                    city: 'melbourne',
-                    postalCode: '',
-                    aboutMe: `Oh so, your weak rhyme. You doubt I'll bother, reading into it.I'll probably won't, left to my own devicesBut that's the difference in our opinions.`
-                }
+                password : ""
             }
         },
         
@@ -66,18 +63,27 @@
                       })
                       .then(response => {
                         // alert(1)
-                        localStorage.setItem('user',JSON.stringify(response.data.success))
+                        
                         // localStorage.setItem('email',response.data.success.user.email)
                         // localStorage.setItem('name',response.data.success.user.name)
                         // localStorage.setItem('jwt',response.data.success.token)
-
-                        if (response.data.success.token != null){
-                            this.$router.push('/')
+                        
+                        if (response.data.type != 'success'){
+                            console.log(response.data)
+                            localStorage.setItem('user',JSON.stringify(response.data.success.data))
+                            this.success.push(response.data.success)
+                            // this.$router.push('/')
                             // this.$router.push("/"+response.data.success.user.role)
+                        }
+                        else{
+                            console.log(response.data.error.description)
+                            this.errors.push(response.data.error.error)
                         }
                       })
                       .catch(function (error) {
-                        console.error(error);
+                        console.error(error.response.data.error.description);
+                        // this.errors=error.response.data.error.error
+                        this.errors.push(error.response.data.error.description)
                       });
                 }
             },
@@ -85,19 +91,11 @@
                 alert('Your data: ' + JSON.stringify(this.user))
             }
         }
-        // beforeRouteEnter (to, from, next) {
-        //     const status =  JSON.parse(window.localStorage.getItem('user'));
-        //     if (status!=null || status!=undefined) {
-        //         return next('/admin');
-        //     }
-
-        //     next();
-        // }
     }
 </script>
 <style>
   .account-form
   {
-      height: 400px;
+      height: 500px;
   }
 </style>

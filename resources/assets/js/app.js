@@ -3,9 +3,11 @@ require('./bootstrap');
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+// Auth
+// import Login from './components/Auth/Views/Login'
+// import Register from './components/Auth/Views/Register'
+
 // Plugins
-import Login from './components/Account/Views/Login'
-import Register from './components/Account/Views/Register'
 import GlobalComponents from './globalComponents'
 import GlobalDirectives from './globalDirectives'
 import Notifications from './components/UIComponents/NotificationPlugin'
@@ -22,13 +24,14 @@ import './assets/sass/paper-dashboard.scss'
 import 'es6-promise/auto'
 
 // plugin setup
-Vue.use(Login)
-Vue.use(Register)
 Vue.use(VueRouter)
 Vue.use(GlobalComponents)
 Vue.use(GlobalDirectives)
 Vue.use(Notifications)
 Vue.use(SideBar)
+// Auth Setup
+// Vue.use(Login)
+// Vue.use(Register)
 
 // configure router
 const router = new VueRouter({
