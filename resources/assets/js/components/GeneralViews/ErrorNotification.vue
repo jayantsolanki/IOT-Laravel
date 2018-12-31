@@ -1,13 +1,13 @@
 <template>
-    <p class="alert alert-danger text-center" v-if="errors.length">
+    <p class="card text-center" v-if="errors.length">
 
         <span v-for="msg in errors">
-            <span class = "">{{ msg.description }}</span>
-            <ul>
-                <li v-for="error in msg.error">
+            <span class = "text-danger"><i>{{ msg.description }}</i></span>
+            <ol>
+                <li class='text-danger' v-for="error in msg.error">
                     {{error[0]}}
                 </li>
-            </ul>
+            </ol>
         </span>
     </p>
 </template>

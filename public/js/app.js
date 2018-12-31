@@ -51583,7 +51583,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.fade-enter-active,\n.fade-leave-active {\n  transition: opacity .1s\n}\n.fade-enter,\n.fade-leave-to\n/* .fade-leave-active in <2.1.8 */\n\n{\n  opacity: 0\n}\nbody{\n    margin: 0;\n    padding: 0;\n}\nbody:before{\n    content: '';\n    position: fixed;\n    width: 100vw;\n    height: 100vh;\n    /* background-image: url(\"https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg\"); */\n    /* background-image: url(\"https://images.pexels.com/photos/593322/pexels-photo-593322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\"); */\n    /* background-image: url(\"https://images.pexels.com/photos/776656/pexels-photo-776656.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\"); */\n    /* background-image: url(\"https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?cs=srgb&dl=blue-blue-background-botanical-1445416.jpg&fm=jpg\"); */\n    /* background-image: url(\"https://images.pexels.com/photos/796620/pexels-photo-796620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\"); */\n    background-image: url(\"https://images.pexels.com/photos/1261154/pexels-photo-1261154.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\");\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-attachment: fixed;\n    background-size: cover;\n    -webkit-filter: blur(3px);\n    -moz-filter: blur(3px);\n    -o-filter: blur(3px);\n    -ms-filter: blur(3px);\n    filter: blur(3px);\n}\n@media (max-width:960px) { /*for small screens*/\n.account-form\n    {\n        /* position: absolute; */\n        /* top: 50%; */\n        /* left: 50%; */\n        /* transform: translate(-50%,-50%); */\n        /* width: 80%; */\n        /* height: 500px; */\n        /* padding: 80px 40px; */\n        margin-top: 92%;\n        /* margin-left:10%; */\n        /* margin-right: 10%; */\n        /* padding-top: 100%; */\n        /* box-sizing: border-box; */\n        /* background: rgba(0,0,0,.5); */\n        /* background: rgba(102,102,102,.5); */\n}\n}\n.account-form\n{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    width: 400px;\n    height: 500px;\n    padding: 80px 40px;\n    box-sizing: border-box;\n    background: rgba(0,0,0,.5);\n    /* background: rgba(102,102,102,.5); */\n}\n.avatar {\n    position: absolute;\n    width: 80px;\n    height: 80px;\n    border-radius: 50%;\n    overflow: hidden;\n    /* top: calc(-80px/2); */\n    top: 0px;\n    left: calc(50% - 40px);\n    /* opacity: 0.5; */\n    z-index: -10;\n}\n.account-form h2 {\n    margin: 0;\n    padding: 0 0 20px;\n    color: #fff;\n    text-align: center;\n    text-transform: uppercase;\n}\n.account-form p\n{\n    margin: 0;\n    padding: 0;\n    font-weight: bold;\n    color: #fff;\n}\n.account-form input\n{\n    width: 100%;\n    margin-bottom: 20px;\n}\n.account-form input[type=\"email\"],\n.account-form input[type=\"password\"]\n{\n    /* border: none; */\n    border: 1px solid #fff;\n    /* border-bottom: 1px solid #fff; */\n    background: transparent;\n    outline: none;\n    /* height: 40px; */\n    color: #fff;\n    font-size: 16px;\n}\n/* .account-form input[type=\"submit\"] {\n    height: 30px;\n    color: #fff;\n    font-size: 15px;\n    background: red;\n    cursor: pointer;\n    border-radius: 25px;\n    border: none;\n    outline: none;\n    margin-top: 15%;\n} */\n.account-form a\n{\n    color: #fff;\n    font-size: 14px;\n    font-weight: bold;\n    text-decoration: none;\n}\ninput[type=\"checkbox\"] {\n    width: 20%;\n}\n.input-group-addon{\n  border: 1px solid #fff;\n    /* border-bottom: 1px solid #fff; */\n    background: transparent;\n    outline: none;\n    /* height: 40px; */\n    color: #fff;\n    font-size: 16px;\n    font-weight: bold;\n}\n", ""]);
+exports.push([module.i, "\n.fade-enter-active,\n.fade-leave-active {\n  transition: opacity .1s\n}\n.fade-enter,\n.fade-leave-to\n/* .fade-leave-active in <2.1.8 */\n\n{\n  opacity: 0\n}\nbody{\n    margin: 0;\n    padding: 0;\n}\nbody:before{\n    content: '';\n    position: fixed;\n    width: 100vw;\n    height: 100vh;\n    /* background-image: url(\"https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg\"); */\n    /* background-image: url(\"https://images.pexels.com/photos/593322/pexels-photo-593322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\"); */\n    /* background-image: url(\"https://images.pexels.com/photos/776656/pexels-photo-776656.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\"); */\n    /* background-image: url(\"https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?cs=srgb&dl=blue-blue-background-botanical-1445416.jpg&fm=jpg\"); */\n    /* background-image: url(\"https://images.pexels.com/photos/796620/pexels-photo-796620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\"); */\n    background-image: url(\"https://images.pexels.com/photos/1261154/pexels-photo-1261154.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\");\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-attachment: fixed;\n    background-size: cover;\n    -webkit-filter: blur(3px);\n    -moz-filter: blur(3px);\n    -o-filter: blur(3px);\n    -ms-filter: blur(3px);\n    filter: blur(3px);\n}\n@media (max-width:960px) { /*for small screens*/\n.account-form\n    {\n        /* position: absolute; */\n        /* top: 50%; */\n        /* left: 50%; */\n        /* transform: translate(-50%,-50%); */\n        /* width: 80%; */\n        /* height: 500px; */\n        /* padding: 80px 40px; */\n        margin-top: 92%;\n        /* margin-left:10%; */\n        /* margin-right: 10%; */\n        /* padding-top: 100%; */\n        /* box-sizing: border-box; */\n        /* background: rgba(0,0,0,.5); */\n        /* background: rgba(102,102,102,.5); */\n}\n}\n.account-form\n{\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    width: 400px;\n    height: 600px;\n    padding: 80px 40px;\n    box-sizing: border-box;\n    background: rgba(0,0,0,.5);\n    /* background: rgba(102,102,102,.5); */\n}\n.avatar {\n    position: absolute;\n    width: 80px;\n    height: 80px;\n    border-radius: 50%;\n    overflow: hidden;\n    /* top: calc(-80px/2); */\n    top: 0px;\n    left: calc(50% - 40px);\n    /* opacity: 0.5; */\n    z-index: -10;\n}\n.account-form h2 {\n    margin: 0;\n    padding: 0 0 20px;\n    color: #fff;\n    text-align: center;\n    text-transform: uppercase;\n}\n.account-form p\n{\n    margin: 0;\n    padding: 0;\n    font-weight: bold;\n    color: #fff;\n}\n.account-form input\n{\n    width: 100%;\n    margin-bottom: 20px;\n}\n.account-form input[type=\"email\"],\n.account-form input[type=\"password\"]\n{\n    /* border: none; */\n    border: 1px solid #fff;\n    /* border-bottom: 1px solid #fff; */\n    background: transparent;\n    outline: none;\n    /* height: 40px; */\n    color: #fff;\n    font-size: 16px;\n}\n/* .account-form input[type=\"submit\"] {\n    height: 30px;\n    color: #fff;\n    font-size: 15px;\n    background: red;\n    cursor: pointer;\n    border-radius: 25px;\n    border: none;\n    outline: none;\n    margin-top: 15%;\n} */\n.account-form a\n{\n    color: #fff;\n    font-size: 14px;\n    font-weight: bold;\n    text-decoration: none;\n}\ninput[type=\"checkbox\"] {\n    width: 20%;\n}\n.input-group-addon{\n  border: 1px solid #fff;\n    /* border-bottom: 1px solid #fff; */\n    background: transparent;\n    outline: none;\n    /* height: 40px; */\n    color: #fff;\n    font-size: 16px;\n    font-weight: bold;\n}\n", ""]);
 
 // exports
 
@@ -51726,7 +51726,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.account-form\n{\n    height: 500px;\n}\n", ""]);
+exports.push([module.i, "\n.account-form\n{\n    height: 600px;\n}\n", ""]);
 
 // exports
 
@@ -51801,6 +51801,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         handleSubmit: function handleSubmit(e) {
+            var _this = this;
+
             e.preventDefault();
             var self = this; // important lesson
             if (this.password.length > 0) {
@@ -51815,19 +51817,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                         self.errors = [];
                         self.success = [response.data.success];
                         self.notifyVue('top', 'center', response.data.success);
-                        // this.$router.push('/')
+                        _this.$router.push('/');
                     }
                 }).catch(function (error) {
-                    console.error(error.response.data.error.description);
-                    self.success = [];
-                    self.errors = [error.response.data.error];
-                    // this.errors.push(error.response.data.error.description)
-                    self.notifyVue('top', 'center', error.response.data.error);
+                    if (error.response.data.message) {
+                        //for 500 error
+                        var error = { description: '500: Bad Server request, contact admin', error: { server: [error.response.data.message] } };
+                        console.log(error);
+                        self.success = [];
+                        self.errors = [error];
+                        self.notifyVue('top', 'center', error);
+                    } else {
+                        console.error(error.response.data.error.description);
+                        self.success = [];
+                        self.errors = [error.response.data.error];
+                        self.notifyVue('top', 'center', error.response.data.error);
+                    }
                 });
             }
-        },
-        updateProfile: function updateProfile() {
-            alert('Your data: ' + JSON.stringify(this.user));
         },
         notifyVue: function notifyVue(verticalAlign, horizontalAlign, message) {
             var type = null,
@@ -51932,15 +51939,17 @@ var render = function() {
   return _vm.errors.length
     ? _c(
         "p",
-        { staticClass: "alert alert-danger text-center" },
+        { staticClass: "card text-center" },
         _vm._l(_vm.errors, function(msg) {
           return _c("span", [
-            _c("span", {}, [_vm._v(_vm._s(msg.description))]),
+            _c("span", { staticClass: "text-danger" }, [
+              _c("i", [_vm._v(_vm._s(msg.description))])
+            ]),
             _vm._v(" "),
             _c(
-              "ul",
+              "ol",
               _vm._l(msg.error, function(error) {
-                return _c("li", [
+                return _c("li", { staticClass: "text-danger" }, [
                   _vm._v(
                     "\n                " + _vm._s(error[0]) + "\n            "
                   )
@@ -52145,34 +52154,26 @@ var render = function() {
           })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "row mb-0" }, [
-          _c(
-            "div",
-            {
-              staticClass: "col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4"
-            },
-            [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-danger",
-                  attrs: { type: "submit" },
-                  on: { click: _vm.handleSubmit }
-                },
-                [_c("b", [_vm._v("Sign In")])]
-              )
-            ]
-          )
+        _c("div", { staticClass: "row text-center" }, [
+          _c("div", {}, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-danger",
+                attrs: { type: "submit" },
+                on: { click: _vm.handleSubmit }
+              },
+              [_c("b", [_vm._v("Sign In")])]
+            )
+          ])
         ]),
         _vm._v(" "),
         _c("hr"),
         _vm._v(" "),
-        _c("div", { staticClass: "row mb-0" }, [
+        _c("div", { staticClass: "row text-center" }, [
           _c(
             "div",
-            {
-              staticClass: "col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4"
-            },
+            {},
             [
               _c(
                 "router-link",
@@ -52309,7 +52310,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.account-form input[type=\"text\"]\n {\n     /* border: none; */\n     border: 1px solid #fff;\n     /* border-bottom: 1px solid #fff; */\n     background: transparent;\n     outline: none;\n     /* height: 40px; */\n     color: #fff;\n     font-size: 16px;\n}\n.account-form\n {\n     height: 600px;\n}\n", ""]);
+exports.push([module.i, "\n.account-form input[type=\"text\"]\n  {\n      /* border: none; */\n      border: 1px solid #fff;\n      /* border-bottom: 1px solid #fff; */\n      background: transparent;\n      outline: none;\n      /* height: 40px; */\n      color: #fff;\n      font-size: 16px;\n}\nselect#region{\n      border: 1px solid #fff;\n      /* background: transparent; */\n      background-color: transparent;\n      color: #fff;\n      font-size: 16px;\n}\noption { \n    /* Whatever color  you want */\n    background-color: #AAAAAA;\n}\n.account-form\n  {\n      height: 600px;\n}\n", ""]);
 
 // exports
 
@@ -52320,6 +52321,28 @@ exports.push([module.i, "\n.account-form input[type=\"text\"]\n {\n     /* borde
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_GeneralViews_ErrorNotification_vue__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_GeneralViews_ErrorNotification_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_GeneralViews_ErrorNotification_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_GeneralViews_SuccessNotification_vue__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_GeneralViews_SuccessNotification_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_GeneralViews_SuccessNotification_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -52365,11 +52388,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+    components: {
+        ErrorNotification: __WEBPACK_IMPORTED_MODULE_0__components_GeneralViews_ErrorNotification_vue___default.a,
+        SuccessNotification: __WEBPACK_IMPORTED_MODULE_1__components_GeneralViews_SuccessNotification_vue___default.a
+    },
     data: function data() {
         return {
+            errors: [],
+            success: [],
             name: "",
             email: "",
+            region: "",
             password: "",
             password_confirmation: ""
         };
@@ -52380,33 +52412,67 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this = this;
 
             e.preventDefault();
-
+            var self = this; // important lesson
             if (this.password === this.password_confirmation && this.password.length > 0) {
                 axios.post('api/register', {
                     name: this.name,
                     email: this.email,
+                    region: this.region,
                     password: this.password,
-                    c_password: this.password_confirmation
+                    password_confirmation: this.password_confirmation
                 }).then(function (response) {
-                    localStorage.setItem('user', response.data.success.name);
-                    localStorage.setItem('jwt', response.data.success.token);
-
-                    if (localStorage.getItem('jwt') != null) {
-                        _this.$router.go('/');
+                    if (response.data.type != 'success') {
+                        console.log(response.data);
+                        localStorage.setItem('user', JSON.stringify(response.data.success.data));
+                        self.errors = [];
+                        self.success = [response.data.success];
+                        response.data.success.description = response.data.success.description + ', please complete your profile';
+                        self.notifyVue('top', 'center', response.data.success);
+                        _this.$router.push('/');
                     }
                 }).catch(function (error) {
-                    console.error(error);
+                    if (error.response.data.message) {
+                        //for 500 error
+                        console.log(error.response.data);
+                        var error = { description: '500: Bad Server request, contact admin', error: { server: [error.response.data.message] } };
+                        self.success = [];
+                        self.errors = [error];
+                        self.notifyVue('top', 'center', error);
+                    } else {
+                        console.error(error.response.data.error.description);
+                        self.success = [];
+                        self.errors = [error.response.data.error];
+                        self.notifyVue('top', 'center', error.response.data.error);
+                    }
                 });
             } else {
                 this.password = "";
-                this.passwordConfirm = "";
-
-                return alert('Passwords do not match');
+                this.password_confirmation = "";
+                var error = { type: 'error', description: 'Passwords do not match' };
+                self.notifyVue('top', 'center', error);
             }
+        },
+        notifyVue: function notifyVue(verticalAlign, horizontalAlign, message) {
+            var type = null,
+                icon = null;
+            if (message.type == 'success') {
+                type = 'success';
+                icon = 'ti-thumb-up';
+            } else {
+                type = 'danger';
+                icon = 'ti-alert';
+            }
+            this.$notifications.notify({
+                message: message.description,
+                icon: icon,
+                horizontalAlign: horizontalAlign,
+                verticalAlign: verticalAlign,
+                type: type
+            });
         }
     },
     beforeRouteEnter: function beforeRouteEnter(to, from, next) {
-        if (localStorage.getItem('jwt')) {
+        if (localStorage.getItem('jwt') && false) {
             return next('/');
         }
 
@@ -52422,164 +52488,216 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "account-form" }, [
-    _c("img", {
-      staticClass: "avatar",
-      attrs: {
-        src:
-          "https://compass-ssl.microsoft.com/assets/7c/f5/7cf5c795-b490-4bed-9289-f6826c9dd76b.svg?n=account-icon-gray.svg"
-      }
-    }),
-    _vm._v(" "),
-    _c("h2", [_vm._v("Registration")]),
-    _vm._v(" "),
-    _c("form", { attrs: { method: "POST", action: "/register" } }, [
-      _c("div", { staticClass: "input-group input-group-lg" }, [
-        _c(
-          "span",
-          { staticClass: "input-group-addon", attrs: { id: "sizing-addon1" } },
-          [_vm._v("Name")]
-        ),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.name,
-              expression: "name"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: {
-            id: "name",
-            type: "text",
-            required: "",
-            autofocus: "",
-            placeholder: "Full Name"
-          },
-          domProps: { value: _vm.name },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.name = $event.target.value
-            }
-          }
-        })
-      ]),
+  return _c(
+    "div",
+    { staticClass: "account-form" },
+    [
+      _c("notifications"),
       _vm._v(" "),
-      _c("div", { staticClass: "input-group input-group-lg" }, [
-        _c(
-          "span",
-          { staticClass: "input-group-addon", attrs: { id: "sizing-addon1" } },
-          [_vm._v("E-Mail")]
-        ),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.email,
-              expression: "email"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: {
-            id: "email",
-            type: "email",
-            required: "",
-            placeholder: "Email"
-          },
-          domProps: { value: _vm.email },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.email = $event.target.value
-            }
-          }
-        })
-      ]),
+      _c("img", {
+        staticClass: "avatar",
+        attrs: {
+          src:
+            "https://compass-ssl.microsoft.com/assets/7c/f5/7cf5c795-b490-4bed-9289-f6826c9dd76b.svg?n=account-icon-gray.svg"
+        }
+      }),
       _vm._v(" "),
-      _c("div", { staticClass: "input-group input-group-lg" }, [
-        _c(
-          "span",
-          { staticClass: "input-group-addon", attrs: { id: "sizing-addon1" } },
-          [_vm._v("Password")]
-        ),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.password,
-              expression: "password"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: {
-            id: "password",
-            type: "password",
-            required: "",
-            placeholder: "Password"
-          },
-          domProps: { value: _vm.password },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.password = $event.target.value
-            }
-          }
-        })
-      ]),
+      _c("h2", [_vm._v("Registration")]),
       _vm._v(" "),
-      _c("div", { staticClass: "input-group input-group-lg" }, [
-        _c(
-          "span",
-          { staticClass: "input-group-addon", attrs: { id: "sizing-addon1" } },
-          [_vm._v("Retype Password")]
-        ),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.password_confirmation,
-              expression: "password_confirmation"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: {
-            id: "password-confirm",
-            type: "password",
-            required: "",
-            placeholder: "Password"
-          },
-          domProps: { value: _vm.password_confirmation },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+      _c("form", { attrs: { method: "POST", action: "/register" } }, [
+        _c("div", { staticClass: "input-group input-group-lg" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.name,
+                expression: "name"
               }
-              _vm.password_confirmation = $event.target.value
+            ],
+            staticClass: "form-control",
+            attrs: {
+              id: "name",
+              type: "text",
+              required: "",
+              autofocus: "",
+              placeholder: "Full Name"
+            },
+            domProps: { value: _vm.name },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.name = $event.target.value
+              }
             }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row mb-0" }, [
-        _c(
-          "div",
-          { staticClass: "col-md-8 col-md-offset-4 col-xs-8 col-xs-offset-4" },
-          [
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "input-group input-group-lg" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.email,
+                expression: "email"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: {
+              id: "email",
+              type: "email",
+              required: "",
+              placeholder: "Email"
+            },
+            domProps: { value: _vm.email },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.email = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "input-group input-group-lg" }, [
+          _vm._m(2),
+          _vm._v(" "),
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.region,
+                  expression: "region"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { required: "", name: "region", id: "region" },
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.region = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            [
+              _c(
+                "option",
+                { attrs: { value: "", selected: "", disabled: "" } },
+                [_vm._v("Choose your region")]
+              ),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "1" } }, [
+                _vm._v("America/Pacific (UTC−08:00)")
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "2" } }, [
+                _vm._v("America/Mountain (UTC−07:00)")
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "3" } }, [
+                _vm._v("America/Central (UTC−06:00)")
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "4" } }, [
+                _vm._v("America/Eastern (UTC−05:00)")
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "5" } }, [
+                _vm._v("Asia/Kolkata (UTC+05:30)")
+              ]),
+              _vm._v(" "),
+              _c("option", { attrs: { value: "6" } }, [
+                _vm._v("Europe/London (UTC 00:00)")
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "input-group input-group-lg" }, [
+          _vm._m(3),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.password,
+                expression: "password"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: {
+              id: "password",
+              type: "password",
+              required: "",
+              placeholder: "Password"
+            },
+            domProps: { value: _vm.password },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.password = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "input-group input-group-lg" }, [
+          _vm._m(4),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.password_confirmation,
+                expression: "password_confirmation"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: {
+              id: "password_confirmation",
+              type: "password",
+              required: "",
+              placeholder: "Retype Password"
+            },
+            domProps: { value: _vm.password_confirmation },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.password_confirmation = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row text-center" }, [
+          _c("div", {}, [
             _c(
               "button",
               {
@@ -52589,34 +52707,90 @@ var render = function() {
               },
               [_vm._v("\n                    Register\n                ")]
             )
-          ]
-        )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c("div", { staticClass: "row text-center" }, [
+          _c(
+            "div",
+            {},
+            [
+              _c(
+                "router-link",
+                { staticClass: "btn btn-danger", attrs: { to: "login" } },
+                [
+                  _vm._v(
+                    "\n                    Already registered! Sign In\n                "
+                  )
+                ]
+              )
+            ],
+            1
+          )
+        ])
       ]),
       _vm._v(" "),
-      _c("hr"),
+      _c("ErrorNotification", { attrs: { errors: _vm.errors } }),
       _vm._v(" "),
-      _c("div", { staticClass: "row mb-0" }, [
-        _c(
-          "div",
-          { staticClass: "col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2" },
-          [
-            _c(
-              "router-link",
-              { staticClass: "btn btn-danger", attrs: { to: "login" } },
-              [
-                _vm._v(
-                  "\n                    Already registered! Sign In\n                "
-                )
-              ]
-            )
-          ],
-          1
-        )
-      ])
-    ])
-  ])
+      _c("SuccessNotification", { attrs: { success: _vm.success } })
+    ],
+    1
+  )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      { staticClass: "input-group-addon", attrs: { id: "sizing-addon1" } },
+      [_c("i", { staticClass: "ti-user" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      { staticClass: "input-group-addon", attrs: { id: "sizing-addon1" } },
+      [_c("i", { staticClass: "ti-email" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      { staticClass: "input-group-addon", attrs: { id: "sizing-addon1" } },
+      [_c("i", { staticClass: "ti-map-alt" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      { staticClass: "input-group-addon", attrs: { id: "sizing-addon1" } },
+      [_c("i", { staticClass: "ti-lock" })]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "span",
+      { staticClass: "input-group-addon", attrs: { id: "sizing-addon1" } },
+      [_c("i", { staticClass: "ti-lock" })]
+    )
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

@@ -71,7 +71,7 @@
       left: 50%;
       transform: translate(-50%,-50%);
       width: 400px;
-      height: 500px;
+      height: 600px;
       padding: 80px 40px;
       box-sizing: border-box;
       background: rgba(0,0,0,.5);
